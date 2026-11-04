@@ -53,4 +53,4 @@ GitHub 是全世界程序员放代码的地方，但对于刚接触的人来说�
 
 如果这个仓库帮到了你，点个 Star 让更多新手看到：
 
-[![Star History Chart](https://api.star-history.com/svg?repos=your-username/github-xinshoucun&type=Date)](https://star-history.com/#your-username/github-xinshoucun&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Yan-W-u/github-Rookie-Camp-xinshoucun&type=Date)](https://star-history.com/#Yan-W-u/github-Rookie-Camp-xinshoucun&Date)
