@@ -53,6 +53,29 @@ git reset --hard abcdef
 2. **依赖没装** —— 看项目语言：Python 找 `requirements.txt`，Node 找 `package.json`
 3. **版本不对** —— 项目要求 Python 3.10 你装的是 3.7，这类问题很常见
 
+## 提交的作者显示成一个陌生名字（不是我）？
+
+说明你电脑上的 Git 配置里残留了别人的身份。先查：
+
+```bash
+git config --list --show-origin | grep user
+```
+
+如果显示的是 `laoxu`、`admin` 之类，说明全局配置被写死了。改成你自己：
+
+```bash
+git config --global user.name "你的用户名"
+git config --global user.email "你的GitHub隐私邮箱"
+```
+
+**已经推上去的提交不会自动变**，需要重写历史（只适合个人仓库，别人也在用的仓库别这么干）：
+
+```bash
+# 重写当前分支所有提交的作者
+git rebase --root --exec 'git commit --amend --no-edit --reset-author'
+git push --force-with-lease
+```
+
 ## 怎么同步原作者的更新到我的 Fork？
 
 ```bash

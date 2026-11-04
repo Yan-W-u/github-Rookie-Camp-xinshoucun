@@ -55,6 +55,21 @@ git config --global user.email "你的GitHub注册邮箱"
 git config --global --list
 ```
 
+**这一步千万别跳过。** 很多人的电脑上早就有别人（或某个教程）留下的 `user.name`，比如 `laoxu`、`admin`、`user`，配置一次都没检查过。后果是：你以后所有的提交，作者都显示成那个陌生的名字，GitHub 上不会有你的头像，贡献图也不会变绿——白干了。
+
+看到名字不对就重新执行上面两条 `git config --global` 命令覆盖即可。
+
+### 邮箱该填哪个？
+
+GitHub 现在默认隐藏真实邮箱，推荐用它给你的隐私邮箱：打开 [Settings → Emails](https://github.com/settings/emails)，找到形如 `12345678+你的用户名@users.noreply.github.com` 的那串地址，填这个就行。既能把提交关联到你账号，又不会暴露真实邮箱。
+
+想知道自己现在的提交到底是谁？在仓库目录执行：
+
+```bash
+git log -3 --pretty="%h | %an <%ae> | %s"
+```
+
+
 ## 【国内用户】先解决访问问题
 
 GitHub 在国内的访问速度不稳定，如果你打开 github.com 很慢或图片加载不出来，先看 [第 6 章 · 国内加速与实用插件](06-国内加速与实用插件.md)，装好插件再回来继续。
